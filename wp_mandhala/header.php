@@ -92,7 +92,7 @@
 		?>
 
         <div class="redes_menu pr-3">
-            <i class="fab fa-facebook p-1"></i>
+            <a href="https://www.instagram.com/mandhalamx/"><i class="fab fa-facebook p-1"></i></a>
             <i class="fab fa-instagram p-1"></i>
             <i class="fab fa-twitter p-1"></i>
             <i class="fab fa-youtube p-1"></i>

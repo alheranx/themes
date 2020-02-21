@@ -12,15 +12,15 @@
 
     <div class="container-fluid">
         <div class="row">
-            <a href="actividades.php" class="col p-1 text-center bg-primary text-light boton__index">
+            <a href="https://mandhala.org/index.php/category/actividades/" class="col p-1 text-center bg-primary text-light boton__index">
                 Actividades
             </a>
 
-            <a href="articulos.php" class="col p-1 text-center bg-primary text-light boton__index boton__index__central">
+            <a href="https://mandhala.org/index.php/category/articulos/" class="col p-1 text-center bg-primary text-light boton__index boton__index__central">
                 Artículos
             </a>
 
-            <a href="colabora.php" class="col p-1 text-center bg-primary text-light boton__index">
+            <a href="https://mandhala.org/index.php/colabora/" class="col p-1 text-center bg-primary text-light boton__index">
                 Colabora
             </a>
         </div>
@@ -232,7 +232,7 @@
                 </div>
 
                 <div class="col-6 col-md-3 text-center">
-                    <a href="educando.php">
+                    <a href="https://mandhala.org/index.php/educando/">
                         <img src="<?php bloginfo('template_directory'); ?>/img/iconos/icono_educando.png" alt="" class="img-responsive bg-dark rounded-circle icono-circular">
                     </a>
                     <h4 class="mt-3 text-primary">Educando</h4>
@@ -242,7 +242,7 @@
                 </div>
 
                 <div class="col-6 col-md-3 text-center">
-                    <a href="emprendiendo.php">
+                    <a href="https://mandhala.org/index.php/emprendiendo/">
                         <img src="<?php bloginfo('template_directory'); ?>/img/iconos/icono_emprendiendo.png" alt="" class="img-responsive bg-dark rounded-circle icono-circular">
                     </a>
 
@@ -253,7 +253,7 @@
                 </div>
 
                 <div class="col-6 col-md-3 text-center">
-                    <a href="escucha.php">
+                    <a href="https://mandhala.org/index.php/escucha-activa/">
                         <img src="<?php bloginfo('template_directory'); ?>/img/iconos/icono_escucha.png" alt="" class="img-responsive bg-dark rounded-circle icono-circular">
                     </a>
 
