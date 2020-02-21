@@ -117,10 +117,10 @@
 
 
     <div class="container-fluid" id="equipo">
-        <div class="container">
+        <div class="container equipo seccion">
             <div class="row pt-5">
                 <div class="col-12 p-3">
-                    <h2 class="text-center font-weight-bold text-primary">
+                    <h2 class="text-center font-weight-bold text-primary seccion__title">
                         Equipo
                     </h2>
                 </div>
@@ -135,7 +135,7 @@
                         Fundadora
                     </p>
                     
-                    <p class="text-primary text-center admiracion p-0 m-0" style="font-size: 60px; line-height: 1em;">''</p>
+                    <p class="text-primary text-center p-0 m-0 equipo__signos">''</p>
                 </div>
 
                 <div class="col-12 col-6 col-md text-center">
@@ -145,7 +145,7 @@
                         Comunicación
                     </p>
 
-                    <p class="text-primary text-center admiracion p-0 m-0" style="font-size: 60px; line-height: 1em;">''</p>
+                    <p class="text-primary text-center p-0 m-0 equipo__signos">''</p>
                 </div>
 
 
@@ -156,7 +156,7 @@
                         Contenido
                     </p>
 
-                    <p class="text-primary text-center admiracion p-0 m-0" style="font-size: 60px; line-height: 1em;">''</p>
+                    <p class="text-primary text-center p-0 m-0 equipo__signos">''</p>
                 </div>
 
                 
@@ -168,7 +168,7 @@
                         Finanzas
                     </p>
 
-                    <p class="text-primary text-center admiracion p-0 m-0" style="font-size: 60px; line-height: 1em;">''</p>
+                    <p class="text-primary text-center p-0 m-0 equipo__signos">''</p>
                 </div>
 
 
@@ -179,7 +179,7 @@
                         Planeación estratégica
                     </p>
 
-                    <p class="text-primary text-center admiracion p-0 m-0" style="font-size: 60px; line-height: 1em;">''</p>
+                    <p class="text-primary text-center p-0 m-0 equipo__signos">''</p>
                 </div>
                 
             </div>
