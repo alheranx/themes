@@ -1,0 +1,112 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	display: block;
+}
+
+.header {
+	background-image:url(img/header_tornillos.png);
+	background-size: cover;
+
+	&__titulo {
+		padding: 15px 0 0 0;
+		position: relative;
+
+		@include desde(tablet) {
+			padding: 20px 0 0 0;
+		}
+
+		& h1 {
+			color: #fff;
+			font-size: 18px;
+			text-align: center;
+			color: #171717;
+
+			@include desde(tablet) {
+				display: block;
+				font-size: 26px;
+				padding: 5px 0 5px 0!important;
+			}
+
+			@include desde(web) {
+				font-size: 32px;
+			}
+
+			& a {
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		& h2 {
+			display: none;
+			color: #002082;
+			text-align: center;
+
+			@include desde(tablet) {
+				display: block;
+				font-size: 22px;
+			}
+
+			@include desde(web) {
+				font-size: 22px;
+			}
+		}
+	}
+
+	&__contenedor {
+
+		&__facebook {
+			display: none;
+			text-align: right;
+			overflow: hidden;
+			
+
+			& a {
+				display: block;
+				margin: 0px;
+				line-height: 0;
+				padding: 0px;
+			}
+
+			@include desde(web) {
+				display: block;
+			}
+		}
+	}
+
+	&__logotipo {
+		display: block;
+		width: 100%;
+		padding: 15px 0!important;
+	}
+
+}
+
+
+.irarriba a {
+	display: block;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 9999999999999;
+	color: #fff;
+	background: #f00;
+	padding: 0px 3px;
+	border-radius: 3px;
+
+	@include desde(web) {
+		bottom: 20px;
+		right: 20px;
+	}
+
+	& span {
+		font-size: 40px;
+	}
+}

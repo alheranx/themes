@@ -1,0 +1,807 @@
+/*
+Theme Name: Diario EDOMEX
+Theme URI: https://diarioedomex.com/
+Author: h media - Alberto Hernández Ángel
+Author URI: https://hmedia.com.mx/
+Description: Plantilla personalizada en cero para Diario EDOMEX
+Version: 0.9
+License: Privada
+Tags: Multicolor, Noticias, Información, Recuardos
+Text Domain: diarioedomex
+
+Esta plantilla es propiedad privada de Diario EDOMEX
+Se prohibe su uso.
+*/
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: $rosita; /* change if the mask should have another color then white */
+    z-index:999999999999999; /* makes sure it stays on top */
+}
+
+#status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url(status.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+.portada {
+	display: block;
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.borde-superior {
+	border-top: #A1C30D 2px solid;
+}
+
+.subtitulo {
+	font-weight: normal;
+	font-size: 20px;
+	margin-bottom: 15px!important;
+	color: $rosita;
+	font-family: $fira;
+}
+
+.ultimas {
+	padding: 15px 0px!important;
+
+	& hr {
+		display: block;
+		height: 5px;
+		width: 100%;
+		border: 0px;
+	}
+
+
+	&__item {
+		display: block;
+		overflow: hidden;
+		margin-bottom: 15px!important;
+		float: left!important;
+		
+		&__contenedor {
+			display: block;
+			position: relative;
+
+			& img {
+				display: block;
+				width: 100%!important;
+				height: 100px;
+
+				@include desde(movil) {
+					height: 150px;
+				}
+
+				@include desde(tablet) {
+					height: 190px;
+				}
+
+				@include desde(web) {
+					height: 230px;
+				}
+
+			}
+
+			&__titulo {
+				display: block!important;
+				width: 100%;
+				text-decoration: none;
+				color: #fff;
+				text-align: center;
+				background: rgba(0, 0, 0, 0.7);
+				padding: 5px;
+				font-family: $fira;
+				font-size: 12px;
+				font-weight: lighten;
+				line-height: 1.2em;
+				height: 5.5em;
+
+				@include desde(tablet) {
+					font-size: 20px;
+					padding: 10px;
+				}
+			}
+
+			&__titulosolo {
+				position: relative;
+			}
+		}
+		
+		&__logito {
+			padding-left: 0px!important;
+
+			& img {
+				display: block;
+				width: 100%;
+				margin-top: 5px!important;
+
+				@include desde(tablet) {
+					margin-top: 15px!important;
+				}
+			}
+		}
+
+		&__textos {
+			display: block;
+			overflow: hidden;
+
+			&__fecha {
+				font-size: 14px; 
+				display: block;
+				text-align: right;
+				padding: 5px 10px 3px 0px;
+				border-bottom: #CCC 1px solid;
+				margin-bottom: 10px!important;
+			}
+
+			&__resumen {
+				display: block;
+				overflow: hidden;
+				font-family: $fira;
+				font-weight: lighter;
+				font-size: 12px;
+
+				@include desde(tablet) {
+					font-size: 16px;
+				}
+
+				& a {
+					color: $verde;
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		
+	}
+
+}
+
+.regiones {
+	display: none;
+	padding: 15px 0px!important;
+
+	@include desde(tablet) {
+		display: block;
+	}
+
+	& hr {
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: #FFF;
+		border: 0px;
+	}
+
+	&__titulo {
+		margin-bottom: 15px;
+
+		& h3 {
+			padding: 0.8em;
+			font-size: 20px;
+			color: #fff;
+			font-weight: normal;
+			font-family: $fira;
+			height: 2.6em;
+			line-height: 1.1em;
+			text-align: center;
+		}
+
+		&__doble h3 {
+			display: block;
+			padding: 0.3em;
+		}
+
+		&__triangulo {
+			overflow: hidden;
+			width: 0; 
+			height: 0; 
+			margin: 0px auto;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-top: 15px solid $verde;
+		}
+	}
+
+
+
+	&__item {
+		display: block;
+		margin-bottom: 10px!important;
+		overflow: hidden;
+
+
+		&__textos {
+			padding-left: 15px!important;
+			padding-right: 0px!important;
+
+			& a {
+				font-family: $fira;
+				font-size: 12px;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		& img {
+			//border-radius: 0px 15px 0px 15px;
+		}
+	}
+
+	& > div {
+		display: block;
+		overflow: hidden;
+		margin-bottom: 15px!important;
+	}
+
+	&__oriente {
+		& .regiones__titulo {
+			& h3 {
+				background: $azul;
+			}
+
+			&__triangulo {
+				border-top: 15px solid $azul;
+			}
+		}
+	}
+
+	&__norte {
+		& .regiones__titulo {
+			& h3 {
+				background: $amarillo;
+			}
+
+			&__triangulo {
+				border-top: 15px solid $amarillo;
+			}
+		}
+	}
+
+	&__volcanes {
+		& .regiones__titulo {
+			& h3 {
+				background: $agua;
+			}
+
+			&__triangulo {
+				border-top: 15px solid $agua;
+			}
+		}
+	}
+
+	&__ecatepec {
+		& .regiones__titulo {
+			& h3 {
+				background: $verde;
+			}
+
+			&__triangulo {
+				border-top: 15px solid $verde;
+			}
+		}
+	}
+
+	&__mexico {
+		& .regiones__titulo {
+			& h3 {
+				background: $morado;
+			}
+
+			&__triangulo {
+				border-top: 15px solid $morado;
+			}
+		}
+	}
+
+	&__toluca {
+		& .regiones__titulo {
+			& h3 {
+				background: $rosa;
+			}
+
+			&__triangulo {
+				border-top: 15px solid $rosa;
+			}
+		}
+	}
+}
+
+
+
+.categoria {
+	display: block;
+	overflow: hidden;
+	
+
+	&__categorias {
+		display: block;
+		margin-top: 15px!important;
+		padding: 0px!important;
+
+		& h2 {
+			display: block;
+			font-family: $fira;
+			margin-bottom: 15px!important;
+			color: $gris;
+
+			& b {
+				color: $verde;
+			}
+		}
+
+		&__item {
+			padding: 15px!important;
+			margin: 0px 0px 15px 0px!important;
+			overflow: hidden;
+			
+			&:hover {
+				background: #EFEFEF;
+			}
+
+			@include desde(tablet) {
+				
+			}
+
+			&__foto {
+				display: block;
+				padding-right: 0px!important;
+
+				@include desde(tablet) {
+					padding: 0px!important;
+				}
+
+				& img {
+					width: 95%;
+				}
+			}
+
+			&__textos {
+				padding: 0px!important;
+				padding-right: 15px!important;
+
+				&__titulo a {
+					display: block;
+					font-family: $fira;
+					font-size: 18px;
+					line-height: 1em;
+					text-decoration: none;
+					font-weight: 300;
+
+					@include desde(tablet) {
+						font-size: 18px;
+						margin-bottom: 15px;
+					}
+
+					@include desde(web) {
+						font-size: 24px;
+						margin-bottom: 15px;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					& b {
+						font-weight: bold;
+					}
+				}
+
+				&__resumen {
+					display: block;
+					font-family: $fira;
+					font-weight: 300;
+					line-height: 1em;
+
+					&__textos {
+						font-size: 14px;
+						padding: 0px!important;
+
+						@include desde(tablet) {
+							padding: 0px 0px 0px 10px!important;
+						}
+
+						@include desde(web) {
+							padding: 0px 15px!important;
+						}
+					}
+
+
+					&__fecha {
+						display: block;
+						background: $verde;
+						padding: 3px 10px; 
+						color: #FFF;
+						font-family: $fira;
+						text-align: right;
+						margin-bottom: 10px;
+
+
+						@include desde(tablet) {
+							padding: 5px;
+							margin-bottom: 15px; 
+							-webkit-box-shadow: 3px 3px 5px 0px #999;
+							box-shadow: 3px 3px 5px 0px #999;
+						}
+
+						&__dia {
+							font-weight: bold;
+							font-size: 14px;
+							display: inline;
+							text-align: center;
+							line-height: 1em;
+
+							@include desde(tablet) {
+								display: block;
+								font-size: 18px;
+							}
+						}
+
+						&__mes {
+							font-weight: 300;
+							font-size: 12px;
+							display: inline;
+							text-align: center;
+							line-height: 1em;
+
+							@include desde(tablet) {
+								display: block;
+								font-size: 14px;
+							}
+						}
+					}
+
+					& .leer-mas {
+						color: $verde;
+						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+
+
+
+.contacto {
+	display: block;
+	padding: 15px!important;
+	overflow: hidden;
+	font-family: $fira;
+
+	& h3 {
+		font-family: $fira;
+		font-weight: normal;
+		margin-bottom: 1em;
+	}
+
+	&__formulario {
+		background: $gris-super-claro;
+		padding: 15px 30px;
+		width: 100%;
+	}
+
+	&__mapa {
+		padding-left: 30px!important;
+
+		& #map {
+			display: block;
+			width: 100%;
+			height: 400px;
+			border: $gris-claro 2px solid;
+		}
+
+		&__direccion {
+			display: block;
+			margin: 30px 0px;
+			font-family: $fira;
+		}
+		
+	}
+}
+
+.form-group {
+	display: block;
+	margin-bottom: 15px;
+
+	& label {
+		display: block;
+	}
+
+	& input {
+		display: block;
+		width: 100%;
+		padding: 5px 10px;
+		border: $gris-claro 1px solid;
+	}
+
+	& textarea {
+		display: block;
+		width: 100%;
+		padding: 5px;
+		height: 150px;
+		border: $gris-claro 1px solid;
+		resize: none;
+	}
+ 
+	& .btn {
+		display: block;
+		width: 100%;
+		padding: 5px 10px;
+		text-align: center;
+		background: $naranja;
+		color: #FFF;
+		border: #fff 1px solid;
+	}
+
+	& .mensaje {
+		display: block;
+		width: 100%;
+		font-size: 0.8em;
+		color: $naranja;
+	}
+}
+
+
+.sitios {
+	border-top: $gris-claro 1px solid;
+	padding-top: 15px!important;
+
+	&__item {
+			padding: 15px 0px!important;
+
+			&:hover {
+				background: $gris-super-claro;
+			}
+
+			@include desde(tablet) {
+				
+			}
+
+			&__foto {
+				display: block;
+				padding-right: 0px!important;
+
+				@include desde(tablet) {
+					
+				}
+
+				& img {
+					width: 95%;
+				}
+			}
+
+			&__textos {
+
+				&__titulo a {
+					display: block;
+					font-family: $fira;
+					font-size: 18px;
+					line-height: 1em;
+					text-decoration: none;
+					font-weight: 300;
+
+					@include desde(tablet) {
+						font-size: 18px;
+						margin-bottom: 15px;
+					}
+
+					@include desde(web) {
+						font-size: 24px;
+						margin-bottom: 15px;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					& b {
+						font-weight: bold;
+					}
+				}
+
+				&__resumen {
+					display: block;
+					font-family: $fira;
+					font-weight: 300;
+					line-height: 1em;
+
+					&__textos {
+						font-size: 14px;
+						padding: 0px!important;
+
+						@include desde(tablet) {
+							padding: 0px!important;
+						}
+
+						@include desde(web) {
+							padding: 0px!important;
+						}
+					}
+
+
+					&__fecha {
+						display: block;
+						background: $verde;
+						padding: 3px 10px; 
+						color: #FFF;
+						font-family: $fira;
+						text-align: right;
+						margin-bottom: 10px;
+					}
+
+					& .leer-mas {
+						color: $verde;
+						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+		}
+}
+
+.customNavigation {
+	display: block;
+	margin-top: 15px;
+	text-align: center;
+
+	& a {
+		background: $gris;
+		color: #fff;
+		padding: 5px 10px;
+		font-family: $fira;
+		cursor: pointer;
+
+		&:hover {
+			background: $verde;
+		}
+	}
+}
+
+
+.pagination {
+	display: block;
+	margin: 30px 0px!important;
+	//background: #efefef;
+	text-align: center;
+	padding: 15px!important;
+	border-top: $gris-claro 1px solid;
+
+	& h2 {
+		display: none;
+	}
+
+	.nav-links {
+		a {
+			background: $gris;
+			color: #fff;
+			display: block-inline;
+			padding: 7px 10px!important;
+			text-decoration: none;
+
+			&:hover {
+				background: $verde;
+			}
+		}
+
+		& .current {
+			background: $naranja;
+			color: #fff;
+			display: block-inline;
+			padding: 7px 10px!important;
+			text-decoration: none;
+		}
+	}
+}
+
+
+// ================================================		ESTILOS LOOP COLORES ================================================
+$ciudades: zona-de-los-volcanes, zona-norte, zona-oriente, valle-de-mexico, valle-de-toluca, valle-de-ecatepec-texcoco;
+$colores: $agua, $amarillo, $azul, $morado, $rosa, $verde;
+$coloresnombre: agua, amarillo, azul, morado, rosa, verde;
+
+@for $i from 1 through length($ciudades) {
+	$currentciudad: nth($ciudades, $i);
+	$currentcolor: nth($colores, $i);
+	$currentcoloresnombre: nth($coloresnombre, $i);
+	
+	.#{$currentciudad}{
+
+		#preloader {
+		    background-color: $currentcolor; /* change if the mask should have another color then white */
+		}
+
+		#status {
+		    background-image:url(status-#{$currentcoloresnombre}.gif); /* path to your loading animation */
+		}
+		
+		& .encabezado__titulo__enlace {
+			// background: url(img/#{$currentciudad}.png) top left no-repeat;
+			// background-size: contain;
+		}
+
+		& .slider2__slider__titulo, .slider3__slider__titulo, .slider4__slider__titulo {
+			background: rgba($currentcolor, 0.4);
+		}
+
+		& .slider1__slider__titulo__fecha {
+			border-top: $currentcolor 1px solid;
+		}
+
+		& .single__entrada__titulo {
+			color: $currentcolor;
+
+			&:hover {
+				color: lighten($currentcolor, 10%);
+			}
+		}
+
+		& .sidebar__titulo h3 {
+			background-color: $currentcolor;
+		}
+
+		& .sidebar__titulo__triangulo {
+			border-top: 15px solid $currentcolor;
+		}
+
+		& .single__entrada__contenido img {
+			border: $currentcolor 1px solid;
+		}
+
+		& .redes-sociales a:hover {
+			background: $currentcolor;
+			border: $currentcolor 2px solid;
+		}
+
+		& .buscar {
+			background: lighten($currentcolor, 50%);
+		}
+
+		& .menu-principal .menu li a:hover {
+			background: $currentcolor; /* Old browsers */
+			background: -moz-linear-gradient(top,  $currentcolor 61%, lighten($currentcolor, 50%) 80%, darken($currentcolor, 5%) 90%, darken($currentcolor, 20%) 97%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  $currentcolor 61%,lighten($currentcolor, 50%) 80%,darken($currentcolor, 5%) 90%,darken($currentcolor, 20%) 97%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  $currentcolor 61%,lighten($currentcolor, 50%) 80%,darken($currentcolor, 5%) 90%,darken($currentcolor, 20%) 97%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$currentcolor', endColorstr='darken($currentcolor, 20%)',GradientType=0 ); /* IE6-9 */
+		}
+
+		& .ultimas__item__textos__resumen a {
+			color: $currentcolor;
+		}
+
+		& .pie {
+			background: $currentcolor;
+		}
+	}
+}
+
+.at-share-btn {
+	color: $rosa!important;
+}

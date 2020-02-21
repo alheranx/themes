@@ -1,0 +1,581 @@
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto 60px;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	/*
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border:  5px solid #fff;
+	left: -5px;
+	background: #fff;
+	
+	/ fix other elements on the page moving (on Chrome) /
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+    */
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	//background: url(images/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+	left: 10px;
+	background: url($ruta+'images/controls.png') no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+	right: 10px;
+	background: url($ruta+'images/controls.png') no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-prev:hover {
+	background-position: 0 0;
+}
+
+.bx-wrapper .bx-next:hover {
+	background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url($ruta+'images/controls.png') -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url($ruta+'images/controls.png') -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
+
+
+
+
+
+.slider1 {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 10px;
+	
+	&__slider {
+		display: block;
+		overflow: hidden;
+		width: 100%;
+	
+		&__li {
+			display: block;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		&__imagen {
+			width: 100%;
+
+			& img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		&__titulo {
+			// background: $rojo;
+			display: block;
+			font-weight: bold;
+			width: 100%;
+			border-top: #fff 3px solid;
+			padding: 10px 5px 5px 5px!important;
+			font-family: "HelveticaN";
+
+			& a {
+				display: block;
+				width: 100%;
+				padding: 0px 15px!important;
+				height: 4.5em;
+				text-align: left;
+				color: #333333;
+				text-decoration: none;
+				font-size: 24px;
+				line-height: 26px;
+
+				@include desde(movil) {
+					font-size: 40px;
+					line-height: 44px;
+					height: 3em;
+				}
+
+				@include desde(tablet) {
+					font-size: 45px;
+					line-height: 48px;
+					height: 3em;
+				}
+
+				@include desde(web) {
+					font-size: 52px;
+					line-height: 56px;
+				}
+			}
+
+			@include desde(tablet) {
+				padding: 10px 5px;
+			}
+
+			& b {
+				font-weight: bold;
+			}
+
+			&__fecha {
+				color: $negro;
+				display: block;
+				text-align: right;
+				font-size: 16px;
+				font-weight: 300;
+				margin-top: 5px;
+				line-height: 1em;
+				border-top: #FFF 1px solid;
+				padding: 5px 10px 0px 0px!important;
+			}
+		}
+
+	}
+
+
+	& .flechas {
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: 80px;
+
+		@include desde(movil) {
+			top: 120px;
+		}
+
+		@include desde(tablet) {
+			top: 175px;
+		}
+
+		& #slider-prev a, & #slider-next a{
+				display: block;
+				float: left;
+				width: 45px;
+				height: 60px;
+				opacity: 0.4;
+				background: url($ruta+'img/flecha-izquierda.png');
+				transition: 0.9s;
+
+				&:hover {
+					opacity: 1;
+				}
+		}
+
+		& #slider-next a {
+			background: url($ruta+'img/flecha-derecha.png');
+			float: right;
+			margin-right: 15px;
+		}
+	}
+
+}
+
+
+
+.slider2 {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 10px;
+
+	&__slider {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		background: #FFF;
+		
+		&__li {
+			display: block;
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+		}
+
+	}
+
+	&__controles {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		margin-top: -46px;
+		position: absolute;
+		
+		&__atras, &__adelante {
+			display: block;
+			float: left;
+
+			& a {
+				display: block;
+				background: $rojo;
+				color: $blanco;
+				font-size: 30px;
+				text-decoration: none;
+				padding: 5px 10px!important;
+			}
+		} 
+
+		&__adelante {
+			float: right;
+		}
+	}
+
+}
+
+
+
+
+
+
+.secciones {
+
+	&__item {
+		display: block;
+		overflow: hidden;
+		height: 620px;
+		margin: 0px!important;
+
+		&__titulo {
+			display: block;
+
+			&__texto a {
+				padding: 5px 20px!important;
+				color: $blanco;
+				background: $rojo;
+				font-weight: 300;
+				float: left;
+				border-radius: 0 0 30px 0;
+				font-size: 40px;
+				margin-bottom: 20px;
+				border: $blanco 1px solid;
+				border-left: 0px;
+				border-top: 0px;
+				font-family: 'Orbitron',sans-serif;
+				font-style: italic;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+
+		&__principal {
+			display: block;
+			padding: 15px 0px 15px 35px!important;
+			overflow: hidden;
+
+
+			&__imagen {
+				width: 100%;
+
+				& img {
+					width: 100%;
+					border: $blanco 2px solid;
+					transition: 1s;
+				}
+			}
+
+			&__fecha {
+				display: block;
+				margin: 0px 0px 3px 0px;
+				overflow: hidden;
+				width: 100%;
+
+				& b {
+					background: $blanco; 
+					color: $rojo;
+					font-weight: 300;
+					font-size: 12px;
+					padding: 0px 10px 3px 3px;
+					line-height: 1em;
+					float: right;
+					display: block;
+					overflow: hidden;
+
+					& span {
+						font-size: 1.1em;
+						margin-right: 0.5em;
+					}
+				}
+			}
+
+			&__titulo {
+				font-weight: bold;
+
+				& a {
+					color: $blanco;
+					text-decoration: none;
+					display: block;
+					font-size: 24px;
+					text-align: left;
+					font-weight: 400;
+					font-family: "cuprum";
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+
+		&__secundaria {
+			display: block;
+			margin-bottom: 30px;
+			overflow: hidden;
+			padding: 10px 20px!important;
+
+			&__wrapper {
+				display: block;
+				overflow: hidden;
+				padding: 30px 30px!important;
+			}
+
+			&__imagen {
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				height: 150px;
+				border: $blanco 2px solid;
+			}
+
+			&__titulo {
+				display: block;
+				color: $blanco;
+				text-decoration: none;
+				text-align: left;
+				font-family: "cuprum";
+				font-size: 21px;
+				line-height: 1.2em;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			&__fecha {
+				display: block;
+				margin: 0px 0px 3px 0px;
+				overflow: hidden;
+				width: 100%;
+
+				& b {
+					background: $blanco; 
+					color: $rojo;
+					font-weight: 300;
+					font-size: 12px;
+					padding: 0px 10px 3px 3px;
+					line-height: 1em;
+					float: right;
+					display: block;
+					overflow: hidden;
+
+					& span {
+						font-size: 1.1em;
+						margin-right: 0.5em;
+					}
+				}
+			}
+
+			&__hr {
+				display: block;
+				margin-bottom: 5px;
+				border: $blanco 0px solid;
+				width: 100%;
+			}
+		}
+	}
+
+	&__valle-de-toluca {
+		background: $azul url($ruta+'img/tramado.png');
+	}
+
+	&__valle-de-mexico {
+		background: $amarillo url($ruta+'img/tramado.png');
+	}
+
+	&__zona-oriente {
+		background: $rojo url($ruta+'img/tramado.png');
+	}
+
+	&__zona-volcanes {
+		background: $morado url($ruta+'img/tramado.png');
+	}
+
+	&__zona-norte {
+		background: $azul url($ruta+'img/tramado.png');
+	}
+
+	&__zona-sur {
+		background: $amarillo url($ruta+'img/tramado.png');
+	}
+}
+

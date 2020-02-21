@@ -1,0 +1,159 @@
+.menu-toggle {
+	display: block;
+	background: #262626;
+	border-top: #CCC 1px solid;
+	border-bottom: #CCC 1px solid;
+	overflow: hidden;
+	margin: 0px 0px 0px 0px;
+	height: 40px;
+
+	@include desde(web) {
+		display: none;
+	}
+
+
+	&__menu-icon {
+		display: block;
+		width: 80%;
+		float: right;
+		text-align: right;
+		height: 40px;
+
+		&__icono {
+			color: #FFF;
+			font-size: 32px;
+			padding: 3px 10px;
+			cursor: pointer;
+
+			&:hover {
+				background: #FD2F0E;
+			}
+		}
+	}
+}
+
+.menu-principal {
+
+	background: #262626;
+	padding: 0px;
+	display: none;
+	overflow: hidden;
+
+	@include desde(web) {
+		display: block!important;
+		margin-bottom: 0px!important;
+	}
+
+
+	&__home {
+			background: $gris;
+			width: 50px;
+			height: 50px;
+			display: block;
+			float: left;
+
+			& img {
+				display: block;
+				width: 30px;
+				margin: 10px auto; 
+			}
+		}
+
+	& .menusearch {
+		display: inline;
+		width: 25%;
+		float: right;
+		display: none;
+		margin: 0px!important;
+		padding: 0px!important;
+		padding: 0px 20px 0px 0px!important;
+
+		& input {
+			padding: 7px;
+			border-radius: 5px;
+			margin-top: 5px;
+			float: right;
+		}
+
+		& button {
+			float: right;
+			border: 0px;
+			background: transparent;
+			font-size: 32px;
+			color: #666;
+			display: block;
+			padding: 3px!important;
+			transition: 1s;
+			
+			&:hover {
+				color: #999;
+			}
+		}
+
+		@include desde(web) {
+			display: block;
+		}
+	}
+
+	& .menu {
+
+		@include desde(web) {
+			width: 75%;
+			float: left;
+		}
+		
+		& li {
+			display: block;
+
+			@include desde(web) {
+				display: inline;
+  				float: left;
+			}
+
+			&:before {
+				color: #FFF;
+				float: left;
+				height: 50px;
+				width: 50px;
+				font-size: 25px;
+				padding: 10px 16px;
+				margin-right: 20px;
+
+				@include desde(web) {
+					display: none;
+				}
+			}
+
+			& a {
+				display: block;
+				font-size: 18px;
+				height: 50px;
+				color: #FFF;
+				padding: 15px 20px;
+				transition: 0.8s;
+				text-decoration: none;
+				font-weight: light;
+				border-bottom: #fff 1px solid;
+				margin-right: 2px;
+				font-family: 'Oswald', sans-serif;
+				
+				@include desde(web) {
+					font-size: 18px;
+					height: 50px;
+					color: #FFF;
+					padding: 10px 15px;
+					transition: 1s;
+					text-decoration: none;
+					font-weight: light;
+					border-bottom: 0px;
+				}
+				
+
+				&:hover {
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7bc40d+61,d2efb3+80,8cc60d+90,5d7f08+97 */
+					background: #FD2F0E; /* Old browsers */
+				}
+			}
+		}
+	}
+}

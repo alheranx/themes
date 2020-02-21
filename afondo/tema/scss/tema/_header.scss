@@ -1,0 +1,179 @@
+@font-face {font-family: 'Cuprum'; font-style: normal; font-weight: 700; src: local('Cuprum Bold'), local('Cuprum-Bold'), url(http://fonts.gstatic.com/s/cuprum/v8/ayvZv_PnVgpyVcmLYRrsfoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2'); unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F; }
+@font-face {font-family: 'Cuprum'; font-style: normal; font-weight: 700; src: local('Cuprum Bold'), local('Cuprum-Bold'), url(http://fonts.gstatic.com/s/cuprum/v8/n3IzcUkIerri6e9sz7DgboX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2'); unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face {font-family: 'Cuprum'; font-style: normal; font-weight: 700; src: local('Cuprum Bold'), local('Cuprum-Bold'), url(http://fonts.gstatic.com/s/cuprum/v8/hDSSF6R2BMlYK6brcnqocoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2'); unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+@font-face {font-family: 'Cuprum'; font-style: normal; font-weight: 700; src: local('Cuprum Bold'), local('Cuprum-Bold'), url(http://fonts.gstatic.com/s/cuprum/v8/uzbsbn5ow8tu8vOkX1aoc4X0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2'); unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+@font-face {font-family: 'Cuprum'; font-style: normal; font-weight: 700; src: local('Cuprum Bold'), local('Cuprum-Bold'), url(http://fonts.gstatic.com/s/cuprum/v8/SfDyn5tWOk7I1we45jpLK5Bw1xU1rKptJj_0jans920.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face {font-family: 'Droid Serif'; font-style: normal; font-weight: 400; src: local('Droid Serif'), local('DroidSerif'), url(http://fonts.gstatic.com/s/droidserif/v6/0AKsP294HTD-nvJgucYTaIgp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face {font-family: 'Orbitron'; font-style: normal; font-weight: 700; src: local('Orbitron-Bold'), url(http://fonts.gstatic.com/s/orbitron/v7/Y82YH_MJJWnsH2yUA5AuYYgp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+@font-face {font-family: dyno; src: url($ruta+'tipografias/Dyno-Regular.otf'); }
+@font-face {font-family: HelveticaN; src: url($ruta+'tipografias/HelveticaNeueLTPro-BdCn.otf'); }
+@font-face {font-family: cuprum; src: url($ruta+'tipografias/Cuprum-Regular.ttf'); }
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	display: block;
+}
+
+header .fecha {
+	display: block;
+	padding: 0 0 10px 20px;
+
+	& em {
+		line-height: 1em;
+		background: url($ruta+'img/iconomex.png') top left no-repeat;
+		padding: 3px 0 0 41px;
+		font-weight: 300;
+		font-size: 16px;
+		font-style: normal;
+		font-family: dyno, Dyno-Regular;
+	}
+}
+
+.irarriba a {
+	display: block;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 9999999999999;
+	color: $blanco;
+	background: $rojo;
+	padding: 0px 3px;
+	border-radius: 3px;
+
+	@include desde(web) {
+		bottom: 20px;
+		right: 20px;
+	}
+
+	& span {
+		font-size: 40px;
+	}
+}
+
+.borde-derecha {
+	border-right: #EEE 1px solid;
+}
+
+.borde-abajo {
+	border-bottom: #EEE 1px solid;
+}
+
+.notas-encabezado {
+	display: none;
+	margin-bottom: 10px;
+	padding-bottom: 10px!important;
+
+	&__logo {
+		display: block;
+		width: 100%;
+		height: 330px;
+		background: #A60B1A url($ruta+'img/logo_header.png') center center no-repeat;
+		background-size: contain;
+
+		& span {
+			display: none;
+		}
+	}
+
+	@include desde(web) {
+		display: block;
+	}
+
+	&__item {
+		background: $gris-claro;
+		height: 330px;
+		display: block!important;
+		overflow: hidden;
+		position: relative;
+
+
+		&__imagen {
+			display: block;
+
+			& img {
+				width: 100%;
+			}
+		}
+
+		&__linea {
+			//background: lighten($gris, 20%);
+			padding: 3px 7px;
+			display: block;
+			margin: 0px 0px 5px 0px;
+			position: absolute;
+			bottom: 5px;
+		}
+	
+		&__fecha, &__categoria {
+			color: $blanco;
+			display: block;
+			font-size: 12px;
+			font-weight: 400;
+			//text-align: left;
+			font-family: dyno, Dyno-Regular;
+		}
+
+		&__categoria a {
+			color: $rojo;
+			text-align: center;
+			display: block;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&__fecha {
+			text-align: right;
+		}
+
+		&__titulo {
+			display: block;
+			margin: 0px;
+			color: #666;
+			text-decoration: none;
+			padding: 5px 3px!important;
+			font-size: 22px;
+			text-align: center;
+			font-family: "HelveticaN";
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.buscadormovil {
+	display: none;
+	padding: 10px 5px!important;
+	background: $gris-claro;
+	overflow: hidden;
+	
+	&__input {
+		display: block;
+		margin: 0px;
+		border-radius: 5px;
+		padding: 5px 5px!important;
+		font-size: 18px;
+		border: 0px;
+		width: 100%;
+	}
+
+	&__enviar {
+		display: block;
+		background: $rojo;
+		color: $blanco;
+		border-radius: 5px;
+		padding: 5px 5px!important;
+		font-size: 18px;
+		border: 0px;
+		width: 100%;
+		overflow: hidden;
+	}
+}

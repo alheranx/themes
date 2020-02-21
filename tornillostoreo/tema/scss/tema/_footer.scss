@@ -1,0 +1,98 @@
+.pie {
+	display: block;
+	background-image: url(img/pie_tornillos.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 15px 10px 30px 10px!important;
+
+	@include desde(web) {
+		padding: 15px 30px 30px 30px!important;
+	}
+
+	&__horarios {
+		color: #fff;
+		margin-bottom: 15px;
+		text-align: center;
+
+		@include desde(web) {
+			text-align: left;
+		}
+
+
+		& h3 {
+			font-family: 'Oswald', sans-serif;
+			color: #fff;
+			font-size: 18px;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 400;
+		}
+
+		& p {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 16px;
+		}
+	}
+
+	&__menu {
+		display: none;
+		margin: 0px;
+		padding: 0px;
+
+		@include desde(web) {
+			display: block;
+		}
+
+		& li {
+			display: block;
+
+			& a {
+				font-size: 16px;
+				display: block;
+				text-decoration: none;
+				color: #fff;
+				font-family: 'Open Sans', sans-serif;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	&__direccion {
+		color: #fff;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 15px;
+		border-top: #fff 3px solid;
+		text-align: center;
+		padding: 15px 0px!important;
+
+		@include desde(web) {
+			text-align: right;
+			border-top: 0px;
+			border-right: #fff 3px solid;
+			padding: 15px!important;
+		}
+
+		& h3 {
+			font-size: 16px;
+			display: block;
+			font-style: underline;
+			font-weight: bold;
+			margin-bottom: 0.5em;
+			display: block;
+			color: #fff;
+		}
+
+		& a {
+			display: block;
+			color: #fff;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+	}
+}

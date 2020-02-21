@@ -1,0 +1,44 @@
+// Este archivo construye el style.css
+
+// La ruta de las fuentes es directa, esta es solo una auxiliar de cuando se hacen pruebas.
+	//$ruta		: 'http://localhost/diarioedomex.com/wp-content/themes/afondo/';
+	//$ruta		: 'http://afondoedomex.com/wp-content/themes/afondo/';
+	$ruta		: 'http://afondoedomex.aplicaciones.io/wp-content/themes/afondo/';
+
+// VARIABLES DEL TEMA
+
+	// PALETA DE COLOR, para cuando halla que variar un tono, se usaron variables.
+	$blanco				: #FFFFFF;
+	$rojo				: #B50E1F;
+	$rosita				: #d81a9c;
+	$naranja			: #E76405;
+	$gris				: #4C4C4C;
+	$gris-claro			: #E5E5E5;
+	$gris-super-claro	: #EFEFEF;
+	$verde				: #A1C30D;
+	$negro				: #000000;
+	$azul				: #005797;
+	$amarillo			: #F8A300;
+	$agua				: #009DAB;
+	$verde				: #83BA00;
+	$morado				: #6F0070;
+	$rosa				: #CA0041;
+
+
+	// FUENTES
+	$body--font-family : 'Cabin', sans-serif; 	// fuente predeterminada
+
+// Librerias
+	@import "librerias/normalize";
+	@import "librerias/ed-grid/ed-grid";
+
+// Tema. Los componentes básicos de todo proyecto
+	@import "tema/single";
+	@import "tema/menus";
+	@import "tema/header";
+	@import "tema/footer";
+	@import "tema/sliders";
+	@import "tema/sidebar";
+	@import "tema/main";
+	@import "tema/icons";
+	@import "tema/anuncios";

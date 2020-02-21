@@ -1,0 +1,352 @@
+.single {
+	display: block!important;
+	padding-top: 10px;
+	overflow: hidden;
+
+	@include desde(tablet) {
+		padding-top: 20px;
+	}
+
+	&__entrada {
+		display: block!important;
+		overflow: hidden;
+		padding: 10px!important;
+
+		&__ads {
+			border-top: #ccc 1px solid;
+			padding-top: 15px!important;
+			display: block!important;
+			overflow: hidden;
+			margin: 0 0 30px 0!important;
+
+			&__item {
+				text-align: center;
+				padding: 15px auto!important;
+			}
+		}
+
+		&__categoria {
+			display: block!important;
+			background: lighten($gris-claro, 1%);
+			padding: 15px 20px;
+			font-style: italic;
+			border-top: #E6E8EC 1px solid;
+			border-top: #E6E8EC 1px solid;
+			font-family: 'Orbitron',sans-serif;
+			overflow: hidden;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+16,eaeaea+83 */
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top, #ffffff 16%, #eaeaea 83%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #ffffff 16%,#eaeaea 83%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #ffffff 16%,#eaeaea 83%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+
+			& a {
+				color: #008BB8;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 16px;
+
+				&:hover {
+					text-decoration: underline;
+					color: $rojo;
+				}
+			}
+		}
+
+
+		&__titulo {
+			display: block!important;
+			overflow: hidden;
+			font-weight: bold;
+			font-size: 24px;
+			margin-bottom: 5px;
+			margin: 10px 0px;
+			font-family: 'Cuprum',sans-serif;
+			color: #373737;
+			font-size: 40px;
+
+			& a {
+				text-decoration: none;
+				color: #333;
+				font-weight: 300;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			& b {
+				font-weight: bold;
+			}
+		}
+
+		&__fecha {
+			display: block!important;
+			overflow: hidden;
+			padding: 1em!important;
+			color: $gris;
+			font-weight: 400;
+			font-family: "dyno";
+			color: #666;
+			font-size: 17px;
+
+			& a {
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&__contenido {
+			display: block!important;
+			overflow: hidden;
+			font-size: 20px;
+			width: 100%;
+			font-family: "Cabin",sans-serif;
+			color: #333;
+
+			line-height: 1.5em;
+
+			& p {
+				display: block!important;
+				overflow: hidden;
+				text-align: justify;
+			}
+
+			& p iframe {
+				display: block;
+				width: 100%;
+				margin: 15px auto;
+				height: 250px;
+
+				@include desde(movil) {
+					height: 280px;
+				}
+
+				@include desde(tablet) {
+					width: 80%;
+					height: 350px;
+					margin: 15px auto!important;
+				}
+
+				@include desde(web) {
+					width: 80%;
+					height: 400px;
+					margin: 15px auto!important;
+				}
+			}
+
+
+			&__banner {
+				display: block;
+				width: 100%;
+				padding: 15px 0px!important;
+				overflow: hidden;
+				margin: 10px 0 10px 0!important;
+			}
+
+			.wp-caption {
+				display: block;
+				width: 100%!important;
+			}
+
+
+			& img {
+				display: block!important;
+				width: 100%;
+				overflow: hidden;
+			}
+
+			& .wp-caption {
+				display: block;
+				margin: 15px 0px;
+			}
+
+			& .wp-caption-text {
+				display: block;
+				background: #535353;
+				width: 100%;
+				padding: 0px 5px!important;
+				text-align: center;
+				color: #fff;
+			}
+		}
+
+		&__compartir {
+			display: block!important;
+			overflow: hidden;
+			margin: 30px auto 15px auto!important;
+
+			& h3 {
+				font-size: 16px;
+				color: $gris;
+				padding: 0px;
+				margin: 0px 0px 0.5em 1em;
+			}
+
+			& .caja {
+				padding-top: 10px!important;
+				padding-bottom: 10px!important;
+			}
+		}
+
+		&__foto {
+			display: block;
+
+			& img {
+				display: block;
+				margin: 15px auto;
+				border: #ccc 1px solid;
+			}
+
+			&__abrir {
+				display: block;
+				text-align: center;
+				text-decoration: none;
+				font-size: 'Cuprum',sans-serif;
+				font-weight: bold;
+				color: #333;
+
+				&:hover {
+					text-decoration: underline;
+					color: #700001;
+				}
+			}
+
+			&__navegacion {
+				display: block;
+				padding: 30px!important;
+
+				& a {
+					text-decoration: none;
+					color: #333;
+					font-weight: bold;
+					font-size: 'Cuprum',sans-serif;
+
+					&:hover {
+						text-decoration: underline;
+						color: #700001;
+					}
+				}
+				
+				&__izquierda {
+					display: block; 
+					float: left;
+				}
+				&__derecha {
+					display: block; 
+					float: right;
+				}
+			}
+		}
+	}
+
+
+
+	&__tags {
+		
+		border-top: #CCC 1px solid;
+		border-bottom: #CCC 1px solid;
+		padding-top: 10px!important;
+		padding-bottom: 10px!important;
+		margin: 30px 0px!important;
+
+		font-size: 11px;
+		font-weight: bold;
+		font-family: "Arial", "Helvetica", "sans-serif";
+
+		
+		& a {
+			color: #008FC4;
+			text-decoration: none;
+
+			&:hover {
+				color: $rojo;
+				text-decoration: underline;
+			}
+		}
+
+	}
+
+
+	&__relacionadas {
+		display: block!important;
+		border-top: #000 1px solid;
+		border-bottom: #000 1px solid;
+		padding: 10px 0px 20px 0px!important;
+		margin-bottom: 20px!important;
+
+		&__titulo {
+			display: block!important;
+			font-family: "Arial", "Helvetica", "sans-serif";
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			font-size: 18px;
+			padding: 10px 0px!important;
+			overflow: hidden;
+		}
+
+		&__item {
+			padding: 20px!important;
+
+			&__imagen img {
+				display: block!important;
+				height: 122px;
+				margin-bottom: 15px!important;
+			}
+
+			&__titulo a {
+				color: #00A0C6;
+				font-size: 16px;
+				font-weight: bold;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	& .gallery {
+		display: block;
+		margin: 15px 0px!important;
+
+		&-item {
+			padding: 5px!important;
+			margin: 0px!important;
+
+			@include desde(tablet) {
+				padding: 9px!important;
+			}
+
+			@include desde(web) {
+				padding: 12px!important;
+			}
+			
+			& a {
+				display: block;
+				border: #AAA 2px solid;
+			}
+
+			& img {
+				border: 0;
+				opacity: 1;
+				transition: 0.7s;
+
+				@include desde(tablet) {
+					-webkit-box-shadow: 2px 2px 7px 1px #CCCCCC;
+					box-shadow: 2px 2px 7px 1px #CCCCCC;
+				}
+
+				&:hover {
+					opacity: 0.4;
+				}
+			}
+		}
+	}
+
+}

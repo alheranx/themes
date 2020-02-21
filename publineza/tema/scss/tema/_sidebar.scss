@@ -1,0 +1,93 @@
+.lateral {
+	margin-top: 15px;
+
+	&__siguenos {
+		display: block;
+		margin: 15px 0px!important;
+		overflow: hidden;
+		padding: 15px!important;
+		background: #EFEFEF;
+
+		& p span {
+			font-family: $fira;
+			font-size: 16px;
+			display: block;
+			color: #000;
+			margin-bottom: 1em!important;
+			font-weight: bold;
+		}
+
+		& .addthis_follow_label {
+			padding-left: 10px!important;
+		}
+	}
+
+
+	&__buscar{
+
+		& .searchform {
+			background: $verde;
+			display: block;
+			padding: 10px!important;
+			overflow: hidden;
+
+			& .screen-reader-text {
+				color: #fff;
+				font-family: $fira;
+				display: block;
+				margin-bottom: 1em;
+			}
+
+			& #s {
+				display: block;
+				border-radius: 5px;
+				padding: 7px 0px!important;
+				width: 95%;
+				border: $gris-claro 2px solid;
+			}
+
+			& #searchsubmit {
+				display: block;
+				border-radius: 5px;
+				padding: 7px 0px!important;
+				margin-bottom: 15px!important;
+				width: 100%;
+				border: $naranja 2px solid;
+				color: $gris;
+				background: #FFF;
+				float: right;
+			}
+		}
+	}
+
+	&__sugerencias {
+		display: block;
+		background: #EEE;
+		overflow: hidden;
+		padding: 15px!important;
+
+		& h3 {
+				font-family: $fira;
+				font-size: 16px;
+				display: block;
+				color: #000;
+				margin-bottom: 1em!important;
+			}
+
+		&__item {
+			display: block;
+			padding: 0px!important;
+			margin-bottom: 30px!important;
+
+			&__titulo {
+				font-family: $fira;
+				text-decoration: none;
+				line-height: 1.2em;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

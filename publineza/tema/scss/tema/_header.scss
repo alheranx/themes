@@ -1,0 +1,168 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.encabezado {
+	padding: 0px;
+	display: block;
+	overflow: hidden;
+
+	@include desde(web) {
+		padding: 15px 0px;
+	}
+
+	&__titulo {
+		display: block;
+		
+		&__enlace {
+			display: block;
+			width: 100%;
+			height: 160px;
+			background: url(img/logotipo-publineza.png) top left no-repeat;
+			background-size: contain;
+			transition: 0.6s;
+
+			&:hover {
+				opacity: 0.7;
+			}
+
+			& span {
+				display: none;
+			}
+		}
+	}
+
+	&__banner {
+		background: #666;
+		width: 100%;
+		padding: 0px;
+		line-height: 0px;
+		height: auto;
+	}
+}
+
+
+.buscar {
+	display: none;
+	overflow: hidden;
+	background: $gris-super-claro;
+	padding: 30px!important;
+
+	& .wiget-titulo {
+			font-family: $fira;
+			font-size: 20px;
+			text-align: left;
+			font-weight: 400;
+			margin-bottom: 1em!important;
+			display: block;
+		}
+
+	&__calendario {
+
+		& h3 {
+			font-family: $fira;
+			font-size: 16px;
+			text-align: center;
+			font-weight: 300;
+		}
+
+		.calendar_wrap {
+			display: block;
+			width: 100%;
+			font-family: $fira;
+			font-size: 20px;
+
+			& caption {
+				background: $naranja;
+				color: #fff;
+				padding: 5px;
+			}
+
+			& table {
+				width: 100%;
+
+				& th {
+					background: $verde;
+					color: #fff;
+					text-align: center;
+					padding: 5px;
+				}
+
+				& td {
+					text-align: center;
+					padding: 3px;
+					background: #EFEFEF;
+					color: #000;
+					font-weight: 300;
+
+					& a {
+						color: $naranja;
+						font-weight: bold;
+						text-decoration: none;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+
+			}
+		}
+	}
+
+	&__tags {
+		
+		& .tagcloud {
+			display: block;
+			background: $gris;
+			padding: 15px!important;
+
+			& a {
+				color: #fff;
+				text-decoration: none;
+				font-weight: lighter;
+
+				&:hover {
+					color: $verde;
+				}
+			}
+		}
+	}
+
+	&__formulario {
+
+		& .searchform {
+			background: $verde;
+			display: block;
+			padding: 15px!important;
+			overflow: hidden;
+
+			& .screen-reader-text {
+				color: #fff;
+				font-family: $fira;
+				display: block;
+				margin-bottom: 1em;
+			}
+
+			& #s {
+				display: block;
+				border-radius: 5px;
+				padding: 5px!important;
+				width: 100%;
+				margin-bottom: 15px!important;
+				border: $gris-claro 2px solid;
+			}
+
+			& #searchsubmit {
+				display: block;
+				border-radius: 5px;
+				padding: 7px 30px!important;
+				margin-bottom: 15px!important;
+				border: $naranja 1px solid;
+				color: $gris;
+				background: #FFF;
+				float: right;
+			}
+		}
+	}
+}

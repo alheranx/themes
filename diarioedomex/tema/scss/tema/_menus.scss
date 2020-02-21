@@ -1,0 +1,299 @@
+.menu-toggle {
+	display: block;
+	background: lighten($gris, 60%);
+	border-top: #CCC 1px solid;
+	border-bottom: #CCC 1px solid;
+	overflow: hidden;
+	margin: 0px 0px 0px 0px;
+	height: 40px;
+
+	@include desde(web) {
+		display: none;
+	}
+
+
+	&__menu-icon {
+		display: block;
+		width: 80%;
+		float: right;
+		text-align: right;
+		height: 40px;
+
+		&__icono {
+			color: #A1C30D;
+			font-size: 32px;
+			padding: 3px 10px;
+			cursor: pointer;
+
+			&:hover {
+				background: lighten(#A1C30D, 10%);
+			}
+		}
+	}
+}
+
+.menu-principal {
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d8d8d8+61,ffffff+80,d8d8d8+90,828282+97 */
+	background: darken(#d8d8d8, 30%); /* Old browsers */
+	background: -moz-linear-gradient(top,  darken(#d8d8d8, 30%) 61%, darken(#ffffff, 30%) 80%, darken(#d8d8d8, 30%) 90%, darken(#828282, 30%) 97%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  darken(#d8d8d8, 30%) 61%,darken(#ffffff, 30%) 80%,darken(#d8d8d8, 30%) 90%,darken(#828282, 30%) 97%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  darken(#d8d8d8, 30%) 61%,darken(#ffffff, 30%) 80%,darken(#d8d8d8, 30%) 90%,darken(#828282, 30%) 97%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken(#d8d8d8, 30%)', endColorstr='darken(#828282, 30%)',GradientType=0 ); /* IE6-9 */
+
+	-webkit-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+
+	-webkit-box-shadow: 0 5px 3px 0 #CCCCCC;
+	box-shadow: 0 5px 3px 0 #CCCCCC;
+
+
+
+
+	padding: 0px;
+	display: none;
+	overflow: hidden;
+
+	@include desde(web) {
+		display: block!important;
+		border-top: #000 2px solid;
+		margin-bottom: 0px!important;
+	}
+
+
+	&__home {
+			background: $gris;
+			width: 50px;
+			height: 50px;
+			display: block;
+			float: left;
+
+			& img {
+				display: block;
+				width: 30px;
+				margin: 10px auto; 
+			}
+		}
+
+	& .menusearch {
+		display: inline;
+		width: 25%;
+		float: right;
+		display: none;
+		margin: 0px!important;
+		padding: 0px!important;
+		padding: 0px 20px 0px 0px!important;
+
+		& input {
+			padding: 7px;
+			border-radius: 5px;
+			margin-top: 5px;
+			float: right;
+		}
+
+		& button {
+			float: right;
+			border: 0px;
+			background: transparent;
+			font-size: 32px;
+			color: #666;
+			display: block;
+			padding: 3px!important;
+			transition: 1s;
+			
+			&:hover {
+				color: #999;
+			}
+		}
+
+		@include desde(web) {
+			display: block;
+		}
+	}
+
+	& .menu {
+
+		@include desde(web) {
+			width: 75%;
+			float: left;
+		}
+		
+		& li {
+			display: block;
+
+			@include desde(web) {
+				display: inline;
+  				float: left;
+			}
+
+			&:before {
+				color: #FFF;
+				float: left;
+				height: 50px;
+				width: 50px;
+				font-size: 25px;
+				padding: 10px 16px;
+				margin-right: 20px;
+
+				@include desde(web) {
+					display: none;
+				}
+			}
+
+			& a {
+				display: block;
+				font-family: $signika;
+				font-size: 18px;
+				height: 50px;
+				color: #FFF;
+				//background: rgba(0,0,0,0.3);
+				padding: 15px 20px;
+				transition: 0.8s;
+				text-decoration: none;
+				font-weight: light;
+				border-bottom: #fff 1px solid;
+				margin-right: 2px;
+				
+				@include desde(web) {
+					font-family: $signika;
+					font-size: 16px;
+					height: 50px;
+					color: #FFF;
+					padding: 10px 15px;
+					transition: 1s;
+					text-decoration: none;
+					font-weight: light;
+					border-bottom: 0px;
+				}
+				
+
+				&:hover {
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7bc40d+61,d2efb3+80,8cc60d+90,5d7f08+97 */
+					background: $rosita; /* Old browsers */
+					background: -moz-linear-gradient(top,  $rosita 61%, lighten($rosita, 30%) 80%, darken($rosita, 10%) 90%,  darken($rosita, 20%) 97%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top,  $rosita 61%,lighten($rosita, 30%) 80%,darken($rosita, 10%) 90%, darken($rosita, 20%) 97%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom,  $rosita 61%,lighten($rosita, 30%) 80%,darken($rosita, 10%) 90%, darken($rosita, 20%) 97%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$rosita', endColorstr=' darken($rosita, 20%)',GradientType=0 ); /* IE6-9 */
+				}
+			}
+		}
+
+		& .enlace-oculto {
+			display: block;
+
+			@include desde(web) {
+				display: none;
+			}
+		}
+		
+		
+		& .enlace-icono {
+			float: right!important;
+
+			& a {
+				font-family: "hmfonts" !important;
+				padding: 5px 10px;
+				font-size: 30px;
+			}
+
+			@include hasta(web) {
+				display: none;
+			}
+		}
+		
+
+	}
+}
+
+
+#menu-menu-lateral {
+
+	& li {
+		list-style: none!important;
+		text-transform: uppercase;
+	}
+}
+
+
+.enlace-zona {
+	margin-bottom: 0px!important;
+
+	@include desde(tablet) {
+		//margin-bottom: 15px!important;
+	}
+	
+	& a {
+		display: block;
+		color: #FFF;
+		text-decoration: none;
+		font-weight: normal;
+		padding: 7px 0px 7px 20px!important;
+		margin-bottom: 5px;
+		font-size: 18px;
+		text-align: center;
+		font-family: $fira;
+
+		@include desde(tablet) {
+			padding: 11px 0px 11px 20px!important;
+			font-size: 16px;
+		}
+
+		@include desde(web) {
+			padding: 7px 0px 7px 20px!important;
+			font-size: 16px;
+		}
+
+		@include desde(hd) {
+			padding: 8px 0px 8px 20px!important;
+			font-size: 20px;
+		}
+	}
+
+	& .agua {
+		background: #009FAB;
+
+		&:hover {
+			background: lighten(#009FAB, 10%);
+		}
+	}
+
+	& .morado {
+		background: #700070;
+
+		&:hover {
+			background: lighten(#700070, 10%);
+		}
+	}
+
+	& .rosa {
+		background: #CA0041;
+
+		&:hover {
+			background: lighten(#CA0041, 10%);
+		}
+	}
+
+	& .verde {
+		background: #84BA00;
+
+		&:hover {
+			background: lighten(#84BA00, 10%);
+		}
+	}
+
+	& .amarillo {
+		background: #F8A300;
+
+		&:hover {
+			background: lighten(#F8A300, 10%);
+		}
+	}
+
+	& .azul {
+		background: #005899;
+
+		&:hover {
+			background: lighten(#005899, 10%);
+		}
+	}
+}

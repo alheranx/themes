@@ -1,0 +1,46 @@
+.anuncio720 {
+	width: 100%;
+	display: block;
+	height: 110px;
+
+	&__wrapper {
+		//background: $gris-claro;
+		margin-bottom: 10px;
+	}
+
+	&__anuncio {
+		margin: 5px auto!important;
+		display: block;
+		overflow: hidden;
+		height: 90px;
+		text-align: center;
+
+		& div {
+			display: block;
+			margin: 0px auto!important;
+			text-align: center;
+
+			& div {
+				display: block;
+				margin: 0px auto!important;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.fondo-gris {
+	background: #EEE;
+	margin-bottom: 15px!important;
+}
+
+.anuncio300 {
+	width: 100%;
+	display: block;
+
+	&__anuncio {
+		margin: 10px auto!important;
+		display: block;
+		overflow: hidden;
+	}
+}

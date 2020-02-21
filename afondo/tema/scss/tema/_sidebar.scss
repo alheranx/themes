@@ -1,0 +1,575 @@
+.sidebar {
+
+	&__caja {
+		display: block;
+		margin-bottom: 10px!important;
+
+		&__imagen {
+			padding: 0px!important;
+		}
+
+		& img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	& h4 {
+		display: block;
+		text-align: center;
+		padding: 10px 10px;
+		font-size: 20px;
+	}
+
+	&__bloque {
+		display: block;
+		overflow: hidden;
+		margin-bottom: 15px!important;
+
+		& img {
+			display: block!important;
+			overflow: hidden;
+			width: 100%;
+			border: #CCC 1px solid;
+		}
+	}
+}
+
+.acordeon {
+	display: block;
+	margin-bottom: 10px;
+	overflow: hidden;
+
+	& h3 a {
+		display: block;
+		background: $gris;
+		text-align: left;
+		padding: 5px 15px;
+		color: #fff;
+		text-decoration: none;
+		border-bottom: $blanco 1px solid;
+		overflow: hidden;
+		transition: 0.7s;
+		font-family: "dyno";
+
+		& b {
+			font-size: 40px;
+			display: block;
+			float: left;
+		}
+
+		& i {
+			font-size: 24px;
+			font-style: normal;
+			padding: 15px 0 0 10px!important;
+			display: block;
+			float: left;
+		}
+	}
+
+
+	&__zona-norte {
+		&:hover {
+			background: #4F2421!important;
+
+			& b {
+				color: $blanco;
+			}
+		}
+
+		& b {
+			color: #4F2421;
+		}
+	}
+
+	&__zona-sur {
+		&:hover {
+			background: #59056C!important;
+
+			& b {
+				color: $blanco;
+			}
+		}
+
+		& b {
+			color: #59056C;
+		}
+	}
+
+	&__zona-oriente {
+		&:hover {
+			background: #035125!important;
+
+			& b {
+				color: $blanco;
+			}
+		}
+
+		& b {
+			color: #035125;
+		}
+	}
+
+	&__zona-volcanes {
+		&:hover {
+			background: #AF7E00!important;
+
+			& b {
+				color: $blanco;
+			}
+		}
+
+		& b {
+			color: #AF7E00;
+		}
+	}
+
+	&__valle-de-toluca {
+		&:hover {
+			background: #828385!important;
+
+			& b {
+				color: $blanco;
+			}
+		}
+
+		& b {
+			color: #828385;
+		}
+	}
+
+	&__valle-de-mexico {
+		&:hover {
+			background: #00529C!important;
+
+			& b {
+				color: $blanco;
+			}
+		}
+
+		& b {
+			color: #00529C;
+		}
+	}
+
+	&__editorial {
+		&:hover {
+			background: #FF666E!important;
+
+			& b {
+				color: $blanco;
+			}
+		}
+
+		& b {
+			color: #FF666E;
+		}
+	}
+
+	&__muro-ciudadano {
+		& b {
+			color: #01A68F;
+			font-size: 34px!important;
+			padding: 3px 0px!important;
+			display: block;
+			float: left;
+		}
+
+		&:hover {
+			background: #01A68F!important;
+
+			& b {
+				color: $blanco;
+			}
+		}
+
+	}
+	
+	&__publicidadyventas {
+		& b {
+			color: #01A68F;
+			font-size: 34px!important;
+			padding: 3px 0px!important;
+			display: block;
+			float: left;
+		}
+		
+		&:hover {
+			background: #DA1912!important;
+
+			& b {
+				color: $blanco;
+			}
+		}
+
+		& b {
+			color: #DA1912;
+		}
+	}
+
+	&__notas {
+		display: none;
+		border: $rojo 2px solid;
+		border-top: 0px;
+		background: $blanco;
+		overflow: hidden;
+		width: 100%;
+
+		&__item {
+			overflow: hidden;
+			display: block;
+			padding-bottom: 10px!important;
+			border-bottom: #CCC 1px solid;
+
+			&__imagen {
+				padding: 5px!important;
+
+				img {
+					display: block;
+					width: 100%;
+					height: 70px;
+				}
+			}
+
+			&__titulo a {
+				display: block;
+				padding: 5px!important;
+				font-family: "dyno";
+				text-decoration: none;
+				font-size: 16px;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+}
+
+.mexiquenses {
+	display: block;
+	background: $gris-claro;
+
+	&__item {
+
+		&__textos {
+			display: block;
+			padding: 10px;
+		}
+
+		&__titulo {
+			display: block;
+			font-weight: bold;
+			text-decoration: none;
+			font-family: "helveticaN";
+
+			&:hover {
+				color: $rojo;
+				text-decoration: underline;
+			}
+		}
+
+		&__fecha {
+			display: none;
+			border-bottom: $blanco 1px solid;
+			padding: 0px 10px 3px 10px;
+			text-align: right;
+			font-size: 12px;
+			color: $gris;
+			margin-bottom: 10px;
+		}
+
+		&__resumen {
+			display: block;
+			font-size: 16px;
+			line-height: 1.2em;
+			margin-top: 1em;
+			margin-bottom: 10px;
+			font-family: "cuprum";
+
+			& .leer-mas {
+				color: $rojo;
+				text-decoration: none;
+				font-weight: bold;
+
+				&:hover {
+					color: lighten($rojo, 15%);
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.feminicidios {
+	display: block;
+	background: $gris-claro;
+	overflow: hidden;
+
+	& h4 {
+		display: block;
+		font-family: "helveticaN";
+		font-size: 26px;
+		color: #333;
+	}
+
+	&__item {
+		display: block;
+		margin-bottom: 10px;
+		overflow: hidden;
+
+		&__imagen {
+			& img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		&__titulo a {
+			display: block;
+			text-decoration: none;
+			font-size: 18px;
+			font-family: "cuprum";
+			color: #333;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&__fecha {
+			display: none;
+			border-bottom: $gris-claro 1px solid;
+			padding: 0px 10px 3px 10px;
+			text-align: right;
+			font-size: 12px;
+			color: $gris;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+
+.fototeca {
+	display: block;
+	background: #D09C00 url($ruta+'img/tramado.png');
+	overflow: hidden;
+	margin-bottom: 15px!important;
+	padding-bottom: 15px!important;
+
+	& h4 {
+		font-style: italic;
+		font-size: 45px;
+		line-height: 1em;
+		margin: 0px;
+		padding: 0px;
+		color: $blanco;
+		font-weight: 300;
+		text-align: left;
+		text-shadow: 2px 2px 10px #000000;
+		padding: 10px 15px!important;
+	}
+	
+	&__bloque {
+		display: block;
+		padding: 10px 15px!important;
+	}
+
+	&__item {
+		display: block;
+		margin-bottom: 10px;
+		overflow: hidden;
+
+		&__imagen {
+			& img {
+				display: block;
+				width: 100%;
+				border: $blanco 5px solid;
+				border-radius: 3px;
+			}
+		}
+
+		&__titulo a {
+			color: $blanco;
+			display: block;
+			text-decoration: none;
+			font-size: 22px;
+			margin: 10px 0 0 0;
+			font-family: 'Cuprum',sans-serif;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&__descripcion {
+			font-family: "Arial", "Helvetica", "sans-serif";
+			font-size: 12px;
+			color: #fff;
+		}
+
+		&__fecha {
+			display: none;
+			border-bottom: $blanco 1px solid;
+			padding: 0px 10px 3px 10px;
+			text-align: right;
+			font-size: 12px;
+			color: $blanco;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+	}
+
+	&__itemcito {
+		float: left!important;
+
+
+		&__imagen {
+
+			& img {
+				display: block;
+				width: 100%;
+				border: $blanco 5px solid;
+				border-radius: 3px;
+			}
+		}
+	}
+}
+
+.boton-publicidad {
+	display: block;
+	overflow: hidden;
+
+	& a {
+		display: block;
+		background: $rojo url($ruta+'img/tramado.png');
+		padding: 20px 10px;
+		text-align: center;
+		color: $blanco;
+		text-decoration: none;
+		overflow: hidden;
+		font-weight: bold;
+		font-size: 22px;
+
+		&:hover {
+			color: #000;
+		}
+	}
+}
+
+
+.muro {
+	display: block;
+	border: $gris 1px solid;
+	overflow: hidden;
+
+	& h4 {
+		font-style: italic;
+		font-size: 45px;
+		color: $blanco;
+		font-weight: 300;
+		text-align: left;
+	}
+
+	&__item {
+		display: block;
+		margin-bottom: 10px;
+		overflow: hidden;
+		padding: 10px!important;
+
+		&__imagen {
+			& img {
+				display: block;
+				width: 100%;
+				border: #CCC 1px solid;
+			}
+		}
+
+		&__titulo a {
+			color: $rojo;
+			font-weight: bold;
+			display: block;
+			text-decoration: none;
+			font-size: 22px;
+			margin: 0px;
+			font-family: 'Cuprum',sans-serif;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&__fecha {
+			display: block;
+			border-bottom: $gris 1px solid;
+			padding: 0px 10px 3px 10px;
+			text-align: right;
+			font-size: 12px;
+			color: $gris;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+
+		&__resumen {
+			display: block;
+			font-family: 'Cuprum',sans-serif;
+			font-size: 15px;
+			color: #7C7C7C;
+			margin: 0px;
+			padding: 0px 5px 15px 5px!important;
+			border-bottom: #CCC 1px solid;
+		}
+	}
+}
+
+
+
+.popular {
+	display: block;
+	border: $gris 1px solid;
+	overflow: hidden;
+	background: $gris-claro;
+
+	& h4 {
+		color: #000;
+		font-size: 30px;
+		text-align: center;
+		font-family: "orbitron";
+	}
+
+	&__item {
+		display: block;
+		overflow: hidden;
+		margin-bottom: 30px;
+
+		&__posicion {
+			display: block!important;
+			font-family: "cuprum";
+			font-size: 26px;
+			padding: 5px!important;
+		}
+
+		&__imagen {
+			display: block;
+			border: $blanco 4px solid;
+			width: 100%;
+		}
+
+		&__texto {
+			color: $negro;
+			font-weight: 300;
+			display: block;
+			text-decoration: none;
+			font-size: 20px;
+			margin: 5px 0px;
+			padding: 5px 5px;
+			font-family: "cuprum";
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+	}
+}

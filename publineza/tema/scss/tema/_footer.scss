@@ -1,0 +1,69 @@
+.pie {
+	background: #000;
+	margin-top: 3em;
+	padding: 2em;
+
+	&__direccion {
+		display: block;
+		padding: 15px 15px 15px 0px!important;
+		
+		@include desde(tablet) {
+			border-right: #fff 1px solid;
+		}
+	}
+
+	& h3 {
+		font-family: $fira!important;
+		color: #fff;
+		text-align: center;
+		font-weight: lighter;
+		color: $verde;
+
+		@include desde(tablet) {
+			text-align: right;
+		}
+	}
+
+	& address {
+		display: block;
+		color: #fff;
+		font-weight: normal;
+		font-family: $fira;
+		font-style: normal;
+		text-align: center;
+
+		@include desde(tablet) {
+			text-align: right;
+		}
+	}
+
+
+	&__redes {
+		font-family: $fira;
+		color: #fff;
+
+		@include hasta(tablet) {
+			margin-top: 30px!important;
+			text-align: center;
+		}
+
+		& p span {
+			font-weight: normal;
+		}
+
+		& .addthis_follow_label {
+			padding-left: 10px!important;
+			color: #fff;
+
+			&:hover {
+				color: $verde;
+			}
+		}
+	}
+
+	.addthis_toolbox {
+		@include hasta(tablet) {
+			text-align: center!important
+		}
+	}
+}

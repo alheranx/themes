@@ -1,0 +1,207 @@
+.single {
+	display: block!important;
+	padding-top: 10px;
+	overflow: hidden;
+
+	@include desde(tablet) {
+		padding-top: 20px;
+	}
+
+	&__entrada {
+		display: block!important;
+		overflow: hidden;
+		padding: 10px!important;
+
+		&__ads {
+			display: block!important;
+			padding: 10px 0px!important;
+			margin-top: 30px!important;
+		}
+
+		&__categoria {
+			display: block!important;
+			background: lighten($gris-claro, 1%);
+			padding: 15px 20px;
+			font-style: italic;
+			border-top: #E6E8EC 1px solid;
+			border-top: #E6E8EC 1px solid;
+			font-family: 'Orbitron',sans-serif;
+			overflow: hidden;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+16,eaeaea+83 */
+			background: #ffffff; /* Old browsers */
+			background: -moz-linear-gradient(top, #ffffff 16%, #eaeaea 83%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #ffffff 16%,#eaeaea 83%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #ffffff 16%,#eaeaea 83%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+
+			& a {
+				color: #008BB8;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 16px;
+
+				&:hover {
+					text-decoration: underline;
+					color: $rojo;
+				}
+			}
+		}
+
+
+		&__titulo {
+			display: block!important;
+			overflow: hidden;
+			font-weight: bold;
+			font-size: 24px;
+			margin-bottom: 5px;
+			margin: 10px 0px;
+			font-family: 'Cuprum',sans-serif;
+			color: #373737;
+
+			@include desde(movil) {
+				font-size: 26px;
+			}
+			
+			@include desde(tablet) {
+				font-size: 34px;
+			}
+
+			@include desde(web) {
+				font-size: 40px;
+			}
+
+			& b {
+				font-weight: bold;
+			}
+		}
+
+		&__fecha {
+			display: block!important;
+			overflow: hidden;
+			padding: 1em!important;
+			color: $gris;
+			font-weight: 400;
+			font-family: "dyno";
+			color: #666;
+			font-size: 17px;
+
+			& a {
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&__contenido {
+			display: block!important;
+			overflow: hidden;
+			margin-bottom: 30px;
+			font-size: 18px;
+			width: 100%;
+			font-family: "Cabin",sans-serif;
+			color: #333;
+
+			& p {
+				display: block!important;
+				overflow: hidden;
+				text-align: justify;
+			}
+
+
+			& img {
+				display: block!important;
+				width: 100%;
+				overflow: hidden;
+			}
+		}
+
+		&__compartir {
+			display: block!important;
+			overflow: hidden;
+			margin: 30px auto 15px auto!important;
+
+			& h3 {
+				font-size: 16px;
+				color: $gris;
+				padding: 0px;
+				margin: 0px 0px 0.5em 1em;
+			}
+
+			& .caja {
+				padding-top: 10px!important;
+				padding-bottom: 10px!important;
+			}
+		}
+	}
+
+
+
+	&__tags {
+
+		& .caja {
+				border-top: #CCC 1px solid;
+				border-bottom: #CCC 1px solid;
+				padding-top: 10px!important;
+				padding-bottom: 10px!important;
+				margin: 20px 0px!important;
+
+				font-size: 11px;
+				font-weight: bold;
+				font-family: "Arial", "Helvetica", "sans-serif";
+			}
+
+		
+		& a {
+			color: #008FC4;
+			text-decoration: none;
+
+			&:hover {
+				color: $rojo;
+				text-decoration: underline;
+			}
+		}
+	}
+
+
+	&__relacionadas {
+		display: block!important;
+		border-top: #000 1px solid;
+		border-bottom: #000 1px solid;
+		padding: 10px 0px 20px 0px!important;
+		margin-bottom: 20px!important;
+
+		&__titulo {
+			display: block!important;
+			font-family: "Arial", "Helvetica", "sans-serif";
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			font-size: 18px;
+			padding: 10px 0px!important;
+			overflow: hidden;
+		}
+
+		&__item {
+			padding: 20px!important;
+
+			&__imagen img {
+				display: block!important;
+				height: 122px;
+				margin-bottom: 15px!important;
+			}
+
+			&__titulo a {
+				color: #00A0C6;
+				font-size: 16px;
+				font-weight: bold;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+}

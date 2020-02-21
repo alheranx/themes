@@ -1,0 +1,4 @@
+[12-Mar-2016 10:37:34 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home/revistg4/public_html/entidadescom/wp-content/themes/entidades2016/functions.php on line 2
+[12-Mar-2016 10:37:34 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home/revistg4/public_html/entidadescom/wp-content/themes/entidades2016/footer.php on line 21
+[12-Mar-2016 12:11:53 America/Denver] PHP Fatal error:  Call to undefined function add_action() in /home/revistg4/public_html/entidadescom/wp-content/themes/entidades2016/functions.php on line 2
+[12-Mar-2016 12:11:53 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home/revistg4/public_html/entidadescom/wp-content/themes/entidades2016/footer.php on line 21

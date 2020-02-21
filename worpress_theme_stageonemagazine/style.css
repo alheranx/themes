@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* Bootstrap CSS */
+@import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.redes {
+    font-size: 32px!important;
+    text-decoration: none;
+}
+
+.redes:hover {
+    text-decoration: none;
+}
+
+
+/* portada */
+.estilo_default .fondo_pie{
+    background: rgb(185, 1, 1);
+}
+
+/* portada */
+.estilo_portada .fondo_pie{
+    background: rgb(185, 1, 1);
+}
+
+/* cine */
+.estilo_sin-categoria .fondo_pie{
+    background: rgb(4, 19, 160);
+}
+
+/* teatro */
+.estilo_teatro .fondo_pie{
+    background: rgb(202, 32, 160);
+}
+
+/* música */
+.estilo_musica .fondo_pie{
+    background: rgb(255, 180, 0);
+}
+
+/* television */
+.estilo_television .fondo_pie{
+    background: rgb(12, 185, 128);
+}
+
+/* rostros */
+.estilo_nuevos-rostros .fondo_pie{
+    background: rgb(1, 83, 38);
+}
+
+/* escenarios */
+.estilo_escenarios .fondo_pie{
+    background: rgb(152, 0, 253);
+}
+
+/* personajes */
+.estilo_personajes .fondo_pie{
+    background: rgb(0, 140, 255);
+}

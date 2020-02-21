@@ -1,0 +1,139 @@
+.single {
+	display: block;
+	overflow: hidden;
+
+	& .compartir-enlaces {
+		display: block;
+		padding: 0px 0px 15px 0px;
+
+		& h3 {
+			display: block;
+			color: #000;
+			font-family: $fira;
+			font-weight: normal;
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+	}
+
+	&__entrada {
+
+		& img {
+			max-width: 90%;
+			display: block;
+			margin: 30px auto!important;
+			padding: 5px!important;
+			background: #FFF;
+			-webkit-box-shadow: 5px 5px 15px 2px #B3B3B3;
+			box-shadow: 5px 5px 15px 2px #B3B3B3;
+		}
+
+
+		&__titulo {
+			display: block;
+			font-family: $fira;
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 1.1em;
+			margin: 0.7em 0;
+			// border-bottom: #999 3px solid;
+			margin-bottom: 5px;
+
+			@include desde(movil) {
+				font-size: 24px;
+				line-height: 1.1em;
+			}
+			
+			@include desde(tablet) {
+				font-size: 30px;
+				line-height: 1.1em;
+			}
+
+			@include desde(web) {
+				font-size: 50px;
+				line-height: 1.1em;
+			}
+
+			& b {
+				font-weight: bold;
+			}
+		}
+
+		&__fecha {
+				display: block;
+				font-family: $fira;
+				text-align: left;
+				color: #AAA;
+				padding: 0px 15px 0px 0px!important;
+				margin: 0px 0px 30px 0px!important;
+			}
+
+		&__contenido {
+			font-family: $fira;
+			position: relative;
+			display: block;
+			margin-bottom: 30px;
+			overflow: hidden;
+
+			
+		}
+
+		&__compartir {
+			display: block;
+			overflow: hidden;
+			margin: 30px auto 15px auto!important;
+
+			& h3 {
+				font-family: $fira;
+				font-size: 16px;
+				color: $gris;
+				padding: 0px;
+				margin: 0px 0px 0.5em 1em;
+			}
+
+			& .caja {
+				padding-top: 10px!important;
+				padding-bottom: 10px!important;
+			}
+		}
+	}
+
+
+
+	&__tags {
+		display: block!important;
+		background: lighten($verde, 50%);
+		overflow: hidden;
+
+		& .caja {
+				padding-top: 10px!important;
+				padding-bottom: 10px!important;
+			}
+
+		& h3 {
+				font-family: $fira;
+				font-size: 16px;
+				color: $gris;
+				padding: 0px;
+				margin: 0px 0px 0.5em 1em;
+			}
+		
+		& a {
+			display: block;
+			background: $verde;
+			padding: 10px 10px;
+			text-align: center;
+			color: #FFF;
+			text-decoration: none;
+			float: left;
+			margin: 0px 5px 10px 0px;
+			font-size: 12px;
+			font-family: $fira;
+
+			&:hover {
+				background: $gris;
+			}
+		}
+	}
+
+}
