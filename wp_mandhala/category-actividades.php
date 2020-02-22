@@ -16,80 +16,69 @@
         <div class="row">
 
 
-                <?php if ( have_posts() )
-                    $item = 0;
-                    while ( have_posts() ) : the_post(); ?>
-
-                                            <?php
-                                            $image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'vertical');
-                                            ?>
-
-                                            <?php if ( $item < 8 ) { ?>
 
 
+           <?php
+$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
-                                                <div class="col-12 col-md-3">
-                                                    <div class="w-100 d-block shadow">
-                                                        <a href="<?php the_permalink() ?>">
-                                                            <img src="<?php echo $image_url[0]; ?>" alt="<?php echo get_the_title($ID); ?>" class="img-responsive">
-                                                        </a>
-                                                    </div>
-                                                    <h4 class="font-weight-bold mt-3">
-                                                        <a href="<?php the_permalink() ?>">
-                                                            <?php  echo get_the_title($ID); ?>
-                                                        </a>
-                                                    </h4>
-                                                    <p>
-                                                    <small>
-                                                        <?php echo excerptSimple(18); ?>
-                                                    </small>
-                                                    <br>
-                                                    
-                                                    <span class="text-danger font-weight-bold" style="font-size:12px;">
-                                                        <?php  printf(__(get_the_date('jS F, Y'))); ?>
-                                                    </span>
-
-                                                    </p>
-                                                </div>
+$args = array(
+	// 'numberposts'      => 1,
+	// 'category'         => 4, 
+	'posts_per_page' => 2,
+    	// 'post_status' => 'publish',
+   	// 'post_type' => 'post',
+    	// 'orderby' => 'post_date'
+	// 'category_name' => 'HomePost'
+	'paged' => $paged,
+      	'page' => $paged
+);
 
 
-                                                
-                                                    <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                                                            <div class="shadow fondo_pie">
-                                                                <a href="<?php the_permalink() ?>">
-                                                                    <img src="<?php echo $image_url[0]; ?>" title="<?php echo get_the_title($ID); ?>" class="w-100">
-                                                                </a>
-
-                                                                <div class="p-2 text-center">
-                                                                    <a class="text-light" href="<?php the_permalink() ?>">
-                                                                        <?php  echo get_the_title($ID); ?>
-                                                                    </a>
-                                                                </div>
-                                                            </div>    
-                                                    </div> -->
-
-                                                <?php } ?>
-
-                <?php $item++; endwhile; ?>
-
-                
-
-
-
-                <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
- 
- 
- 
-                <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
-
-            
-            
-
-
-
-
-
+query_posts( $args );
+if (have_posts()) :
+    while (have_posts()) : the_post();
+        ?>
+        <div class="recent-cat">
+            <h4 class="title"><?php the_title(); ?></h4>
+            <p><?php the_excerpt(); ?></p>
+            <a href="<?php the_permalink();?>" class="readmore">Read More</a>
         </div>
+        <?php
+endwhile;
+?>
+
+
+
+
+<!-- pagination here -->
+    <?php
+       if (function_exists( 'custom_pagination' )) :
+          custom_pagination( $product_query->max_num_pages,"",$paged );
+      endif;
+?>
+
+
+
+<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+
+
+
+	<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+<?php
+    // wp_reset_query();
+endif;
+
+
+
+next_posts_link();
+previous_posts_link();
+
+?>
+
+
+       
+
+	</div>
     </div>
 </div>
 
